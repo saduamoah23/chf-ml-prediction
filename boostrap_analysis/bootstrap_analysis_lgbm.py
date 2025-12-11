@@ -55,7 +55,7 @@ def recreate_train_test_split(X, y, seed=SEED):
 
 
 def load_imputer():
-    imp_path = PREPROCESSING_DIR / "imputer.pkl"
+    imp_path = PREPROCESSING_DIR / "imputer_lgbm.pkl"
     if not imp_path.exists():
         raise FileNotFoundError(f"Imputer not found at: {imp_path}")
     return joblib.load(imp_path)
